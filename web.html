@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>
+    <script type="text/javascript">
+        ;(function($){$.fn.anystretch=function(src,options,callback){var isBody=this.selector.length?false:true;return this.each(function(i){var defaultSettings={positionX:'center',positionY:'center',speed:0,elPosition:'relative'},el=$(this),container=isBody?$('.anystretch'):el.children(".anystretch"),settings=container.data("settings")||defaultSettings,existingSettings=container.data('settings'),imgRatio,bgImg,bgWidth,bgHeight,bgOffset,bgCSS;if(options&&typeof options=="object")$.extend(settings,options);if(options&&typeof options=="function")callback=options;$(document).ready(_init);return this;function _init(){if(src){var img;if(!isBody){el.css({position:settings.elPosition,background:"none"})}if(container.length==0){container=$("<div />").attr("class","anystretch").css({left:0,top:0,position:(isBody?"fixed":"absolute"),overflow:"hidden",zIndex:10,margin:0,padding:0,height:"100%",width:"100%"})}else{container.find("img").addClass("deleteable")}img=$("<img />").css({position:"absolute",display:"none",margin:0,padding:0,border:"none",zIndex:10}).bind("load",function(e){var self=$(this),imgWidth,imgHeight;self.css({width:"auto",height:"auto"});imgWidth=this.width||$(e.target).width();imgHeight=this.height||$(e.target).height();imgRatio=imgWidth/imgHeight;_adjustBG(function(){self.fadeIn(settings.speed,function(){container.find('.deleteable').remove();if(typeof callback=="function")callback()})})}).appendTo(container);if(el.children(".anystretch").length==0){if(isBody){$('body').append(container)}else{el.append(container)}}container.data("settings",settings);img.attr("src",src);$(window).resize(_adjustBG)}}function _adjustBG(fn){try{bgCSS={left:0,top:0};bgWidth=_width();bgHeight=bgWidth/imgRatio;if(bgHeight>=_height()){bgOffset=(bgHeight-_height())/2;if(settings.positionY=='center'||settings.centeredY){$.extend(bgCSS,{top:"-"+bgOffset+"px"})}else if(settings.positionY=='bottom'){$.extend(bgCSS,{top:"auto",bottom:"0px"})}}else{bgHeight=_height();bgWidth=bgHeight*imgRatio;bgOffset=(bgWidth-_width())/2;if(settings.positionX=='center'||settings.centeredX){$.extend(bgCSS,{left:"-"+bgOffset+"px"})}else if(settings.positionX=='right'){$.extend(bgCSS,{left:"auto",right:"0px"})}}container.children("img:not(.deleteable)").width(bgWidth).height(bgHeight).filter("img").css(bgCSS)}catch(err){}if(typeof fn=="function")fn()}function _width(){return isBody?el.width():el.innerWidth()}function _height(){return isBody?el.height():el.innerHeight()}})};$.anystretch=function(src,options,callback){var el=("onorientationchange"in window)?$(document):$(window);el.anystretch(src,options,callback)}})(jQuery);
+    </script>
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/jquery.easing-1.3.min.js"></script>
+
+    <title>smile pay</title>
+    <style>
+        *{padding: 0; margin:0; border: 0;}
+        li{list-style: none;}
+        .rel{position: relative; width:100%;}
+        .inc-obj{position: relative; width:1085px; margin: 0 auto;}
+        #layerWrap2{position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999; }
+        #layerWrap2 #layerPopCouponType{position:absolute; z-index:2; left:50%; top:50%; }
+        #layerWrap2 #dimmed{position:absolute;left:0%;top:0%;width:100%;height:100%;background:#000;opacity:0.5;z-index:1;filter: alpha(opacity:'50')}
+        .close_pop{
+            position: absolute; right:0px; top:0px; width:60px; height:60px;
+        }
+
+        #p_wrapper{position:relative; width:100%; line-height: 0px;}
+        #p_wrapper img{vertical-align: top; line-height: 0px;}
+
+        #p_header{position: relative; width:100%; border-top:5px solid #ffd200;}
+        #p_contents{position: relative; width:100%; z-index: 99999;}
+        #p_footer{position: relative; width:100%;}
+        .visual{height: 761px;}
+        .logo{position: absolute; top:42px;  z-index: 100;}
+        .menu{position: absolute; right:0px; top:56px;}
+        .menu ul{}
+        .menu ul li{float: left; margin-left: 40px;}
+        .btn01{position: absolute; left: 186px; top:583px;}
+        .btn02{position: absolute; left: 547px; top:583px;}
+        .event02{background-color: #ffffff;}
+        .cbtn01{position: absolute; left: 364px; top:453px;}
+        .cbtn02{position: absolute; left: 424px; top:652px;}
+        .cbtn03{position: absolute; left: 792px; top:652px;}
+        
+
+        .event03 .mcv{position: relative; display: none}
+        .event03 .tabArea{position: relative; width:100%; height: 82px;}
+        .event03 .tabArea .t_btn01{position:absolute; width:240px; height: 82px; left:183px; border:1px solid red;}
+        .event03 .tabArea .t_btn02{position:absolute; width:240px; height: 82px; left:422px; border:1px solid red;}
+        .event03 .tabArea .t_btn03{position:absolute; width:240px; height: 82px; left:663px; border:1px solid red;}
+        .con01 .btns{margin-left: 186px;}
+        .con01 .btns li{float: left; margin-right: 8px;}
+        .con02 .btns2{text-align: center;}
+        .con03 .btns2{text-align: center;}
+        .con01_soldout{position: absolute; left:600px; top:170px;}
+
+        .event04{background-color: #ffd200;}
+
+        .p_top_cnt{width:1085px;height:761px;position:absolute;top:0;left:50%;margin-left:-542px;z-index:100;}
+
+        /*  배너관련 ==================*/
+        #topBanner{position:relative; width:100%; height: 761px; line-height: 0px; overflow: hidden; background-color: #312f31; z-index: 10;}
+        #topBanner img{vertical-align: top; line-height: 0px;}
+
+
+        /*  상단배너 스타일 */
+        .bg{text-align: center; width:100%;height:100%;position: relative;}
+        .mc{position: fixed; top:0; left:0; width:100%; height:100%;}
+
+        /*  좌우버튼 , 페이지버튼 */
+        .left{position: absolute; top:350px; left: 0; z-index: 10000;}
+        .right{position: absolute; top:350px; right: 0; z-index: 10000;}
+        .pageNum{position: absolute; top:685px; width:100%; text-align: center; z-index: 999; }
+        .pageNum a{margin : 0 12px;}
+
+
+        /*  폰 영역 */
+        .phone{position: absolute; left: 105px; top:143px; z-index: 9999;}
+        .viewArea{position: absolute; width:220px; height: 350px; left:13px; top:62px;  z-index: 107;}
+        .mask{position: absolute; left: 3px; top:2px; width:218px; height:350px; overflow: hidden;}
+        .obj{position: absolute; left:0px; top:0px; width:220px;}
+        .obj img{position: absolute; left: 220px; top:0; z-index: 0;}
+        .obj .on{z-index: 100}
+        .obj .off{z-index: 10}
+
+
+
+        /*  우측텍스트영역 */
+        .txt1{position: absolute; left:460px; top:143px; z-index: 100; opacity: 0; display:none;}
+        .txt2{position: absolute; left:460px; top:327px; z-index: 100; opacity: 0; display:none;}
+        .bSmilePayBtn{position: absolute; left:408px; top:486px; z-index: 100000; }
+        .hand{position: absolute; left: -258px; top:-3px; z-index: 12; opacity: 0;  display:none;}
+        /*  배너관련 끝 ==================*/
+        
+        
+        .rollArea{width: 640px;margin:0 auto;position: relative;height:360px;}
+        .rollArea .mm{position: absolute;top:0;left:0;width: 100%;height: 100%;}
+
+
+
+
+        .rollArea img.mm1{z-index: 105}     
+        .rollArea img.mm2{z-index: 104}     
+        .rollArea img.mm3{z-index: 103}     
+        .rollArea img.mm4{z-index: 102}     
+        .rollArea iframe{width: 100%;height: 100%;display: none}    
+   
+    </style>
+<!--
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/08BAEFD2F9/jquery.event.scroll.js"></script>   
+    <script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/08C76B217C/m_scrMvPlayer.js"></script> 
+-->
+    <script>
+
+        function layPopHide(){
+            $("#layerWrap2").hide();
+            $("#layerPopCouponType").remove();
+        }
+        function setCloseSmilePayPlatform (){
+            $("#layerWrap2").hide();
+            $("#layerPopCouponType").re
+
+            move();
+        }
+        function stabPos(pos){
+            $pId = $(pos)
+            aboveHeight = $(window).scrollTop();
+
+            if(aboveHeight <= 90){
+                $('html, body').stop().animate({ scrollTop: $pId.offset().top-90 }, "slow");
+            } else {
+                $('html, body').stop().animate({ scrollTop: $pId.offset().top-45 }, "slow");
+            }
+
+        }
+
+        
+    </script>
+</head>
+
+<body>
+<div id="layerWrap2" class="fixed" style="display:none;">
+    <div id="dimmed"></div>
+</div>
+<div id="p_wrapper">
+    <div id="p_header">
+        <div class="visual rel" id="sub01">
+            <div class="inc-obj" style="z-index: 20;">
+                <div class="logo">
+                    <img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/logo.png" alt=""/>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="javascript:stabPos('#sub01')"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/menu_01.png" alt=""/></a></li>
+                        <li><a href="javascript:stabPos('#sub02')"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/menu_02.png" alt=""/></a></li>
+                        <li><a href="javascript:stabPos('#sub04')"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/menu_04.png" alt=""/></a></li>
+                        <li><a href="javascript:stabPos('#sub05')"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/menu_05.png" alt=""/></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--상단 배너 코드 -->
+            <div id="topBanner">
+                <div class="p_top_cnt">
+
+                    <!-- 좌우버튼 , 페이지버튼 -->
+                    <div class="left"><a href="javascript:;"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/button_left.png" alt="왼쪽버튼"/></a></div>
+                    <div class="right"><a href="javascript:;"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/button_right.png" alt="오른쪽버튼"/></a></div>
+                    <div class="pageNum">
+                        <a href="javascript:;"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/num_off.png" alt="off"></a>
+                        <a href="javascript:;"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/num_off.png" alt="off"></a>
+                        <a href="javascript:;"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/num_off.png" alt="off"></a>
+                        <a href="javascript:;"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/num_off.png" alt="off"></a>
+                        <a href="javascript:;"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/num_off.png" alt="off"></a>
+                        <a href="javascript:;"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/num_off.png" alt="off"></a>
+                    </div>
+
+                    <!-- 폰 -->
+                    <div class="phone">
+                        <div class="viewArea">
+                            <div class="mask">
+                                <div class="obj">
+                                    <img class="off" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/p_img_01.jpg?ver=0712_3" alt=""/>
+                                    <img class="off" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/p_img_02.jpg?ver=0712_3" alt=""/>
+                                    <img class="off" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/p_img_03.jpg?ver=0712_3" alt=""/>
+                                    <img class="off" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/p_img_04.jpg?ver=0712_3" alt=""/>
+                                    <img class="off" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/p_img_05.jpg?ver=0712_3" alt=""/>
+                                    <img class="off" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/p_img_06.jpg?ver=0712_3" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/phone_frame.png?ver=0712_3" alt=""/>
+                    </div>
+
+                    <!-- 문구관련 -->
+                    <div>
+                        <!--1번영역 문구 -->
+                        <img class="txt1" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/con01_text01.png" alt=""/>
+                        <img class="txt2" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/con01_text02.png" alt=""/>
+                        <!--2번영역 문구 -->
+                        <img class="txt1" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/con02_text01.png" alt=""/>
+                        <img class="txt2" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/con02_text02.png" alt=""/>
+                        <!--3번영역 문구 -->
+                        <img class="txt1" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/con03_text01.png" alt=""/>
+                        <img class="txt2" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/con03_text02.png" alt=""/>
+
+                        <!--4번영역 문구 -->
+                        <img class="txt1" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/con04_text01.png" alt=""/>
+                        <img class="txt2" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/con04_text02.png" alt=""/>
+                        <!-- 손 -->
+                        <img class="hand" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/visualcut_04_hand.png" alt=""/>
+                        <!--5번영역 문구 -->
+                        <img class="txt1" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/con05_text01.png" alt=""/>
+                        <img class="txt2" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/con05_text02.png" alt=""/>
+                        <!--6번영역 문구 -->
+                        <img class="txt1" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/con06_text01.png" alt=""/>
+                        <img class="txt2" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/con06_text02.png" alt=""/>
+
+
+                        <!-- 스마일페이 등록하기 개발 버튼 -->
+                        <iframe class="bSmilePayBtn"  width="270" height="63" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                        <!--<iframe class="bSmilePayBtn" src="http://eventv2.auction.co.kr/event3/2016/07/40/edra617_Smilepay/ifrm00TopSmilePay.aspx" width="270" height="63" scrolling="no" frameborder="0" allowTransparency="true"></iframe>-->
+
+                    </div>
+                </div>
+
+                <!-- 배경관련 -->
+                <div class="bg">
+                    <div class="mc"></div>
+                </div>
+            </div>
+            <!--상단 배너 코드 끝-->
+        </div>
+    </div>
+    <div id="p_contents">
+
+        <div class="event02 rel" id="sub02">
+            <div class="inc-obj">
+                <!-- dev : 0830 스마일페이 전용 쿠폰 -->
+                <iframe class="cbtn01" src="http://eventv2.auction.co.kr/Event3/2016/09/67/EDRA868_SmilePay/IfrmCoupon.aspx" width="353" height="64" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                
+                <img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/1001_couponArea.jpg" alt=""/>
+            </div>
+        </div>
+        
+        <!-- 상시혜택 -->        
+        <div class="rel" style="background-color:#f0f0f4;">
+            <div class="inc-obj">
+                <img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0819_addBenefit.jpg" alt="" usemap="#Map" border="0"/>
+                <map name="Map" id="Map">
+                  <area shape="rect" coords="368,553,722,617" href="http://reward.auction.co.kr/MyPoint/SmilePointList.aspx"  target="_blank"/>
+                </map>
+            </div>
+        </div>
+        
+        <!--  youtobe -->
+        <div class="event03_add rel" style="background-color: #ffffff; padding-bottom: 60px;">
+            <div class="inc-obj" style="text-align: center;">
+                <img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0819_event04_img.jpg" alt=""/>
+                <iframe style="position: relative; z-index: 100; " width="640" height="360" src="http://www.youtube.com/embed/BCmZaPWZF40?wmode=opaque&rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- 스마일페이 사용방법 -->
+        <div class="event04 rel" id="sub04">
+            <div class="inc-obj">
+                <img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0819_event04_top_img.jpg" alt=""/>
+                <iframe class="" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/bottom_banner.html" width="1085" height="765" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+        </div>
+
+
+        <!-- spc 사용방법 -->
+        <div class="event05 rel" id="sub05" style="background-color:#027fe9;">
+            <div class="inc-obj">
+                <img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/event05_top_img.jpg" alt=""/>
+                <iframe class="" src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/happy_point_banner_0907.html?ver=0907" width="1085" height="763" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                
+                 <div class="p_watch_info">
+                    <a href="#" class="show_cnt"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/happy_notice_img_off.jpg" alt="관람시 주의 사항 보기" /></a>
+                    <a href="#" class="hide_cnt" style="display:none;"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/happy_notice_img_on.jpg" alt="관람시 주의 사항 닫기" /></a>
+                </div>
+            </div>
+            <div style="height: 1px; overflow: hidden;">        
+                <div class="rollArea rel" style=""></div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+<!-- 상단 배너 스크립트  -->
+<script>
+
+     //해피포인트 주의사항 닫기
+    $(".show_cnt").click(function () {
+        $(this).hide();
+        $(this).parent('div').find('.hide_cnt').show();
+        return false;
+    })
+    $(".hide_cnt").click(function () {
+        $(this).hide();
+        $(this).parent('div').find('.show_cnt').show();
+        return false;
+    })
+
+
+    var isView = 0; // 초기활성화 0 부터시작
+    var temp = -1;
+    var total = 6;//배너의 총계수
+    var m_style = "easeInOutExpo"
+    var endTx = "400";
+    var startTx = "408"; //to
+    var speed = $.browser.msie && $.browser.version < 9 ? 0 : 300;
+    var time = -1;
+    var rollTime = 5000; // 배너 롤링 간격
+    $(document).ready(function(){
+
+        //초기값
+        function init(){
+            selectMenu(isView)
+            $(".bSmilePayBtn").attr("src" , "http://eventv2.auction.co.kr/event3/2016/07/40/edra617_Smilepay/ifrm00TopSmilePay.aspx")
+//            $(".bSmilePayBtn").attr("src" , "http://eventnetstg.auction.co.kr/event3/2016/07/40/edra617_Smilepay/ifrm00TopSmilePay.aspx")
+            $(".txt1").css("opacity" ,"0")
+            $(".txt2").css("opacity" ,"0")
+            $(".hand").css("opacity" ,"0")
+        }
+
+        //페이지버튼 클릭시
+        $(".pageNum>a").each(function(index){
+            var $this = $(this)
+            $this.click(function(){
+                isView = index;
+                selectMenu(index)
+            })
+        })
+        function selectMenu(n){
+            if(temp != -1){
+                var off = $(".pageNum>a").eq(temp).find("img").attr("src").replace(/_on.png/,"_off.png")
+                $(".pageNum>a").find("img").eq(temp).attr("src" , off);
+                $(".txt1").eq(temp).stop(true,true).animate({"opacity" :"0","left":endTx+"px"} );
+                $(".txt2").eq(temp).stop(true,true).animate({"opacity" :"0","left":endTx+"px"} , function(){
+                    $(".txt1").css("left" ,"460px")
+                    $(".txt2").css("left" ,"460px")
+
+                });
+
+            }
+            var on = $(".pageNum>a").eq(n).find("img").attr("src").replace(/_off.png/,"_on.png")
+            $(".pageNum>a").find("img").eq(n).attr("src" , on)
+            $(".txt1").eq(n).css("display" , "block")
+            $(".txt2").eq(n).css("display" , "block")
+
+            $(".txt1").eq(n).delay(200).animate({"opacity" :"1" ,"left":startTx+"px"} ,function(){
+                moveObj(n)
+            });
+            $(".txt2").eq(n).delay(400).animate({"opacity" :"1" ,"left":startTx+"px"});
+
+            temp = n
+
+            if(n == 3){
+                $(".hand").stop(true,true).animate({"opacity" :"1"} );
+                $(".hand").css("display" , "block")
+            }else{
+                $(".hand").stop(true,true).animate({"opacity" :"0"} );
+                $(".hand").css("display" , "none")
+            }
+            if(n == 0){
+                $(".mc").anystretch("http://eventimg.auction.co.kr/md/auction/08CC00CDFA/visualcut_0"+(temp+1)+".jpg?ver=0712", {speed: 400 , positionY:"top" });
+            }else{
+                $(".mc").anystretch("http://eventimg.auction.co.kr/md/auction/08CC00CDFA/visualcut_0"+(temp+1)+".jpg?ver=0712", {speed: 400 , positionY:"center"});
+            }
+            //$(".mc").anystretch("http://eventimg.auction.co.kr/md/auction/08CC00CDFA/visualcut_0"+(temp+1)+".jpg?ver=0712", {speed: 400 , positionY:"top" });
+
+        }
+        //핸드폰 안쪽 컨텐츠 움직임
+        var tempP = -1;
+
+        function moveObj(n){
+            if(tempP != -1){
+                $(".obj img").eq(tempP).attr('class','off')
+                $(".off").css("z-index" , "10")
+            }
+            $(".obj img").eq(n).attr('class','on');
+            $(".obj img").eq(n).css("z-index" , "100")
+            $(".obj img").eq(n).stop(true,true).animate({"left": "0px"}, 700 , "easeOutQuart" , function(){
+                $(".off").css("left" , "220px")
+                $(".off").css("z-index" , "10")
+            });
+
+            tempP = n;
+
+        }
+        //좌우 버튼 클릭
+        $(".right").click(function(){
+            if(isView < total -1 ){
+                isView++;
+            }else{
+                isView = 0;
+            }
+            timerOff()
+            selectMenu(isView)
+        });
+        $(".left").click(function(){
+            if(isView > 0 ){
+                isView--;
+            }else{
+                isView = total-1;
+            }
+            timerOff()
+            selectMenu(isView)
+        })
+        $("#topBanner").mouseenter(function(){
+            timerOff()
+        })
+        $("#topBanner").mouseleave(function(){
+            timerOn()
+        })
+        function timerOn(){
+
+            time = 0;
+
+            time = setInterval(rolling ,  rollTime)
+
+
+        }
+        function timerOff(){
+
+            clearInterval(time)
+        }
+        function rolling(){
+
+            if(this.isView < this.total -1){
+                this.isView++
+            }else{
+                this.isView = 0
+            }
+            selectMenu(isView)
+        }
+
+        //
+        init()
+        timerOn()
+    })
+
+    window.onload = function(){
+        var speed = $.browser.msie && $.browser.version < 9 ? 0 : 300;
+        $(".mc").anystretch("http://eventimg.auction.co.kr/md/auction/08CC00CDFA/visualcut_01.jpg", { positionY:"top" });
+        
+        var resultUrl = location.href.indexOf("#sub03")
+        if(resultUrl != -1){
+            stabPos('#sub03')
+        }
+    }
+</script>
+</body>
+</html>

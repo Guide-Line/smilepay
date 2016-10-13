@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>옥션 - 모바일 쇼핑은 옥션</title>
+	<meta charset="euc-kr">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta http-equiv="cleartype" content="on">
+	<!--script src="http://script.auction.co.kr/common/jquery.js"></script//-->
+	<link rel="stylesheet" href="http://eventimg.auction.co.kr/md/auction/087FD6C598/swiper.css">
+	<script src="http://eventimg.auction.co.kr/md/auction/087FD6C598/swiper.js"></script>
+    <link rel="stylesheet" href="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_common_test_0817.css">
+    <style type="text/css" media="screen">
+    	#main_swiper{overflow: hidden;}
+    </style>
+	<script>
+		function stabPos(pos){
+			$pId = $(pos)
+			aboveHeight = $(window).scrollTop();
+			$('html, body').stop().animate({ scrollTop: $pId.offset().top }, "slow");
+		}
+		window.onload = function(){
+			var resultUrl = location.href.indexOf("#sub03")
+			if(resultUrl != -1){
+				stabPos('#sub03')
+			}
+			// var resultUrl = location.href.indexOf("#sub03")
+			// if(resultUrl != -1){
+			// 	stabPos('#sub03')
+			// }
+		}
+	</script>
+</head>
+<body>
+
+	<div id="p_wrapper">
+		<div id="main_swiper">
+			<div class="s_logo">
+				<img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_logo_smilepay.png" alt=""/>
+			</div>
+
+			<div class="s_navi">
+				<ul>
+					<li>
+						<a href="javascript:;" ><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0817_menu_01.png" alt=""/></a>
+					</li>
+					<li>
+						<a href="javascript:stabPos('.event02')" ><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0817_menu_02.png" alt=""/></a>
+					</li>
+					<li>
+						<a href="javascript:stabPos('.event04')" ><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0817_menu_03.png" alt=""/></a>
+					</li>
+					<li>
+						<a href="javascript:stabPos('.event05')" ><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0817_menu_04.png" alt=""/></a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div id="slide01" class="swiper-slide">
+						<p class="text01" data-swiper-parallax="-200"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt01_txt01.png" alt=""/></p>
+						<p class="text02" data-swiper-parallax="-500"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt01_txt02.png" alt=""/></p>
+					</div>
+					<div id="slide02" class="swiper-slide">
+						<p class="text01" data-swiper-parallax="-200"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt02_txt01.png" alt=""/></p>
+						<p class="text02" data-swiper-parallax="-500"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt02_txt02.png" alt=""/></p>
+					</div>
+					<div id="slide03" class="swiper-slide">
+						<p class="text01" data-swiper-parallax="-200"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt03_txt01.png" alt=""/></p>
+						<p class="text02" data-swiper-parallax="-500"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt03_txt02.png" alt=""/></p>
+					</div>
+					<div id="slide04" class="swiper-slide">
+						<p class="text01" data-swiper-parallax="-200"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt04_txt01.png" alt=""/></p>
+						<p class="text02" data-swiper-parallax="-500"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt04_txt02.png" alt=""/></p>
+					</div>
+					<div id="slide05" class="swiper-slide">
+						<p class="text01" data-swiper-parallax="-200"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt05_txt01.png" alt=""/></p>
+						<p class="text02" data-swiper-parallax="-500"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt05_txt02.png" alt=""/></p>
+					</div>
+					<div id="slide06" class="swiper-slide">
+						<p class="text01" data-swiper-parallax="-200"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt06_txt01.png" alt=""/></p>
+						<p class="text02" data-swiper-parallax="-500"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt06_txt02.png" alt=""/></p>
+					</div>
+				</div>
+
+				<div class="btn_smilepay">
+					<iframe src="http://eventv2.auction.co.kr/event3/2016/07/40/edra617_Smilepay/mifrm02SmilePay.aspx" frameborder="0" width="100%" height="100%" scrolling="no" allowtransparency="true"></iframe>
+				</div>
+
+				<div class="swiper-pagination"></div>
+
+				<div class="bg">
+					<img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_bg_img01.jpg" class="bg01" alt="" />
+					<img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_bg_img02.jpg" class="bg02" alt="" />
+					<img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_bg_img03.jpg" class="bg03" alt="" />
+					<img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_bg_img04.jpg" class="bg04" alt="" />
+					<img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_bg_img05.jpg" class="bg05" alt="" />
+					<img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_bg_img06.jpg" class="bg06" alt="" />
+				</div>
+			</div>
+			<script>
+				var main_swiper = new Swiper('#main_swiper .swiper-container', {
+					pagination: '#main_swiper .swiper-pagination',
+					paginationClickable: true,
+					loop: true,
+					autoplay: false,
+					spaceBetween: 0,
+					autoHeight: true,
+					watchSlidesProgress: true,
+					watchSlidesVisibility: true,
+					onSlideChangeStart(main_swiper){
+						var eNum = main_swiper.activeIndex;
+
+						if (eNum == 7){
+							$(".bg img").fadeOut(400);
+							$(".bg img").eq(0).fadeIn(300);
+						} else {
+							$(".bg img").fadeOut(400);
+							$(".bg img").eq(eNum-1).fadeIn(300);
+						}
+					},
+					parallax: true,
+					speed: 800
+				});
+			</script>
+		</div>
+	</div>
+
+</body>
+</html>
