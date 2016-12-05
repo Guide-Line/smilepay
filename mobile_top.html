@@ -29,10 +29,6 @@
 			// }
 		}
 	</script>
-
-
-
-	
 </head>
 <body>
 
@@ -45,16 +41,16 @@
 			<div class="s_navi">
 				<ul>
 					<li>
-						<a href="javascript:;" ><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0817_menu_01.png" alt=""/></a>
+						<a href="javascript:stabPos('.cont1')" ><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0817_menu_02.png" alt=""/></a>
 					</li>
 					<li>
-						<a href="javascript:stabPos('.event02')" ><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0817_menu_02.png" alt=""/></a>
+						<a href="javascript:stabPos('.tab_btn')" ><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0817_menu_03.png" alt=""/></a>
 					</li>
 					<li>
-						<a href="javascript:stabPos('.event04')" ><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0817_menu_03.png" alt=""/></a>
+						<a href="javascript:stabPos('.cont4')" ><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/1130_menu_04.png" alt=""/></a>
 					</li>
 					<li>
-						<a href="javascript:stabPos('.event05')" ><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/0817_menu_04.png" alt=""/></a>
+						<a href="javascript:stabPos('.p_goods_area')" ><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/1130_menu_06.png" alt=""/></a>
 					</li>
 				</ul>
 			</div>
@@ -85,6 +81,14 @@
 						<p class="text01" data-swiper-parallax="-200"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt06_txt01.png" alt=""/></p>
 						<p class="text02" data-swiper-parallax="-500"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt06_txt02.png" alt=""/></p>
 					</div>
+					<div id="slide07" class="swiper-slide">
+						<p class="text01" data-swiper-parallax="-200"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt07_txt01.png" alt=""/></p>
+						<p class="text02" data-swiper-parallax="-500"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt07_txt02.png" alt=""/></p>
+					</div>
+					<div id="slide08" class="swiper-slide">
+						<p class="text01" data-swiper-parallax="-200"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt08_txt01.png" alt=""/></p>
+						<p class="text02" data-swiper-parallax="-500"><img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_cnt08_txt02.png" alt=""/></p>
+					</div>
 				</div>
 
 				<div class="btn_smilepay">
@@ -100,6 +104,8 @@
 					<img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_bg_img04.jpg" class="bg04" alt="" />
 					<img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_bg_img05.jpg" class="bg05" alt="" />
 					<img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_bg_img06.jpg" class="bg06" alt="" />
+					<img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_bg_img07.jpg" class="bg07" alt="" />
+					<img src="http://eventimg.auction.co.kr/md/auction/08CC00CDFA/m_bg_img08.jpg" class="bg08" alt="" />
 				</div>
 			</div>
 			<script>
@@ -115,7 +121,7 @@
 					onSlideChangeStart(main_swiper){
 						var eNum = main_swiper.activeIndex;
 
-						if (eNum == 7){
+						if (eNum == 9){ // 9 
 							$(".bg img").fadeOut(400);
 							$(".bg img").eq(0).fadeIn(300);
 						} else {
