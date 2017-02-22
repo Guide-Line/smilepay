@@ -46,7 +46,7 @@
 			/*background: rgba(0,0,0,.3);*/
 			bottom:4.988%;
 			height:2.258%;
-
+			z-index: 100;
 
 			line-height: 0;
 		}
@@ -234,6 +234,7 @@
 			</div>
 		</div>
 		<script>
+
 			var main_swiper = new Swiper('#main_swiper .swiper-container', {
 				pagination: '#main_swiper .swiper-pagination',
 				paginationClickable: true,
@@ -243,20 +244,20 @@
 				autoHeight: true,
 				watchSlidesProgress: true,
 				watchSlidesVisibility: true,
-				onSlideChangeStart(main_swiper){
-				var eNum = main_swiper.activeIndex;
+				onSlideChangeStart:function(main_swiper){
+					var eNum = main_swiper.activeIndex;
 
-				if (eNum == 9){ // 9
-					$(".bg img").fadeOut(400);
-					$(".bg img").eq(0).fadeIn(300);
-				} else {
-					$(".bg img").fadeOut(400);
-					$(".bg img").eq(eNum-1).fadeIn(300);
-				}
-			},
-			parallax: true,
-					speed: 800
-			});
+					if (eNum == 9){ // 9
+						$(".bg img").fadeOut(400);
+						$(".bg img").eq(0).fadeIn(300);
+					} else {
+						$(".bg img").fadeOut(400);
+						$(".bg img").eq(eNum-1).fadeIn(300);
+					}
+				},
+				parallax: true,
+						speed: 800
+				});
 		</script>
 	</div>
 </div>
